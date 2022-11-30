@@ -2,6 +2,6 @@
 
 i = ord('a')
 while i <= ord('z'):
-	print(chr(i), end="")
+	print("{:c}".format(i), end="")
 	i += 1
 
