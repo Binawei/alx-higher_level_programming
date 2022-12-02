@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+"""My Calculator"""
 if __name__ == "__main__":
     import argparse
     from calculator_1 import add, sub, mul, div
