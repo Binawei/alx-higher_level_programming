@@ -4,7 +4,7 @@ def replace_in_list(my_list, idx, element):
     insert = my_list.insert(idx, element)
     if idx < 0:
         return my_list
-    elif idx >= over:
+    elif idx > over:
         return my_list
     else:
         return insert
