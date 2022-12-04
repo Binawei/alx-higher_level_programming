@@ -6,12 +6,3 @@ def no_c(my_string):
             my_list.remove(ch)
     return "".join(my_list)
 
-
-
-print(no_c("Best School"))
-
-print(no_c("Chicago"))
-
-print(no_c("C is fun!"))
-
-
