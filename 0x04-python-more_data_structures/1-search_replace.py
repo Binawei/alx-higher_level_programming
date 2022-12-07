@@ -1,6 +1,3 @@
 #!/usr/bin/python3
 def search_replace(my_list, search, replace):
-    for i, elem in enumerate(my_list):
-        if elem == search:
-            my_list[i] = replace
-    return my_list
+    return([replace if elem == search else elem for elem in my_list])
