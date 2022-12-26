@@ -1,12 +1,7 @@
 #!/usr/bin/python
-"""
-
-circle.py: The circle module, which defines a Circle class.
-
-"""
+"""Defines a class called Square"""
 class Square:
- """A Square instance models a circle with a radius"""
+     """
+    A Square class with a private object attribute called size"""
     def __init__(self, size):
-    """Initializer with default size as private"""
         self.__size = size
-        """Private instance attribute: size"""
