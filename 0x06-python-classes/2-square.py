@@ -1,5 +1,10 @@
 #!/usr/bin/python3
+"""Defines a class Square"""
 class Square:
+    """
+    A square class with a private object attribute.
+    checks the type of the argument and raises an exception error
+    """
     def __init__(self, size=0):
         if type(size) != int:
             raise TypeError("size must be an integer")
