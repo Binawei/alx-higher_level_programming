@@ -1,11 +1,14 @@
 #!/usr/bin/python3
-"""Defines a class Square"""
+"""This module a class Square that defines a square with
+Private instance attribute: size
+"""
 class Square:
-    """
-    A square class with a private object attribute.
-    checks the type of the argument and raises an exception error
-    """
+    """a class Square that defines a square"""
     def __init__(self, size=0):
+        """Instantiates with a private attribute size.
+        args:
+            size: size of the sqaure which must be >0 and of type int.
+        """
         if type(size) != int:
             raise TypeError("size must be an integer")
         elif size < 0:
