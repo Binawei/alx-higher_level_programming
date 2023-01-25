@@ -1,47 +1,49 @@
-#!/usr/bin/python3
-"""Defines a class called Square"""
-class Square:
-    """
-    initializes the class with a private object called size
-    """
-    def __init__(self, size):
-        """checks the type of the size and initializes it"""
-        if not isinstance(size, int):
-            raise TypeError("size must be an integer")
-        elif size < 0:
-            raise ValueError("size must be >= 0")
-        else:
-            self.__size = size
+#!/usr/bin/python3                                                                                                                      
+"""This module a class Square that defines a square with                                                                                
+Private instance attribute: size                                                                                                        
+"""                                                                                                                                     
+class Square:                                                                                                                           
+    """a class Square that defines a square"""                                                                                          
+    def __init__(self, size=0):                                                                                                         
+        """Instantiates with a private attribute size.                                                                                  
+        args:                                                                                                                           
+            size: size of the sqaure which must be >0 and of type int.
+        """                                                                                                                             
+        if type(size) != int:                                                                                                           
+            raise TypeError("size must be an integer")                                                                                  
+        elif size < 0:                                                                                                                  
+            raise ValueError("size must be >= 0")                                                                                       
+        self.__size = size                                                                                                              
 
+                                                                                                                                        
     def area(self):
-        """
-        Method that returns the area of the square
-        """
+        """                                                                                                                             
+        Returns the current square area.                                                                                                
+        args:                                                                                                                           
+            self: the calling instance                                                                                                  
+        """                                                                                                                             
         return self.__size ** 2
-    @property
+
+    @property                                                                                                                           
     def size(self):
-        """Method to return the size value"""
-        return self.__size
-
-    @size.setter
-    def size(self, value):
-        """Method to set the size value of the square objects
-        """
-        if not isinstance(value, int):
-            raise TypeError("size must be an integer")
-        elif value < 0:
+        """Retrieves the size of the square so returns it"""                                                                            
+        return self.__size                                                                                                              
+                                                                                                                                        
+    @size.setter                                                                                                                        
+    def size(self, value):                                                                                                              
+        """Sets the value of the size to value"""                                                                                       
+        if type(value) != int:                                                                                                          
+            raise TypeError("size must be an integer")                                                                                  
+        elif value < 0:                                                                                                                 
             raise ValueError("size must be >= 0")
-        else:
-            self.__size = value
-
+        self.__size = value
 
     def my_print(self):
-        """Method that print  a # suare according to the size"""
-        if not self.__size:
+        """prints in stdout the square with the character #"""
+        if self.__size == 0:
             print()
         else:
-            for i in range(self.__size):
-                for j in range(self.__size):
-                    print("#", end='')
+            for row in range(self.__size):
+                for column in range(self.__size):
+                    print('#', end="")
                 print()
-
