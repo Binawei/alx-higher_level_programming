@@ -1,4 +1,4 @@
-#!/usr/bin/python3                                                         
+#!/usr/bin/python3                                                  
 """                                                                             
 A rectangle with width and height.                                           
 """                                                                       
@@ -6,7 +6,8 @@ class Rectangle:
     """                                                                    
     Rectangle functions and data                                 
     """         
-    number_of_instances = 0                                                          
+    number_of_instances = 0
+                            
     def __init__(self, width=0, height=0):                     
         """ Instantiation                         
         """ 
