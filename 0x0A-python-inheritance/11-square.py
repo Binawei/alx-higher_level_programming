@@ -17,7 +17,7 @@ class Square(Rectangle):
 
     def area(self):
         """Uses the area() method from rectangle"""
-        return super().area()
+        return self.__size ** 2
 
     def __str__(self):
         return str("[Square] {}/{}".format(self.__size, self.__size))
