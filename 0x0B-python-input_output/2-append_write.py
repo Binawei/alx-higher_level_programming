@@ -11,9 +11,5 @@ def append_write(filename="", text=""):
         -filename: the file to append the text
         -text: the text to be appended to the file
     """
-    with open(filename, 'a+') as f:
-        return f.write(text)
-
-
-nb_characters_added = append_write("file_append.txt", "This School is so cool!\n")
-print(nb_characters_added)
+    with open(filename, 'a', encoding='utf-8') as a_file:
+        return a_file.write(text)
